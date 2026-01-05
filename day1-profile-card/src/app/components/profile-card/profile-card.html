@@ -1,0 +1,25 @@
+<div class="content w-full flex justify-center">
+    <div
+        class="card w-md min-h-100 mt-2 flex flex-col bg-linear-to-tr from-orange-400 to-yellow-300 p-10 flex-wrap overflow-hidden rounded-2xl shadow-xl text-zinc-900">
+
+
+        <h1 class="text-center text-2xl font-bold mb-5">PROFILE CARD</h1>
+        <div class="text-left profile-info flex gap-1 flex-col *:">
+            <p><strong>Name:</strong> {{getName()}}</p>
+            <p><strong>Age:</strong> {{getAge()}}</p>
+            <p><strong>Description:</strong> {{getDescription()}}</p>
+        </div>
+        <div class="rule my-3 self-center w-2/3 h-px bg-amber-500"></div>
+        <section class="update-section">
+            <h2 class="text-lg mb-3"><strong>Update your info</strong></h2>
+            <div class="flex flex-col gap-1 *:shadow-2xl" [formGroup]="profileForm" id="profile-form">
+                <input type="text" formControlName="name" placeholder="John Doe" id="name">
+                <input type="text" formControlName="age" placeholder="30" id="age">
+                <textarea class="resize-none" formControlName="description" id="description"
+                    placeholder="An awesome guy."></textarea>
+
+            </div>
+        </section>
+
+    </div>
+</div>
