@@ -1,0 +1,22 @@
+<div class="activities flex flex-col text-left gap-3">
+    <h1>Manhã</h1>
+    <ng-container *ngIf="activities.morning else elseTemp">
+        <mat-checkbox #morCheck class="item">
+            <span [ngClass]="{checked: morCheck.checked}">{{activities.morning}}</span></mat-checkbox>
+    </ng-container>
+
+    <h1>Tarde</h1>
+    <ng-container *ngIf="activities.afternoon else elseTemp">
+        <mat-checkbox #afCheck class="item">
+            <span [ngClass]="{checked: afCheck.checked}">{{activities.afternoon}}</span></mat-checkbox>
+    </ng-container>
+    <h1>Noite</h1>
+    <ng-container *ngIf="activities.evening else elseTemp">
+        <mat-checkbox #evCheck class="item"><span
+                [ngClass]="{checked: evCheck.checked}">{{activities.evening}}</span></mat-checkbox>
+    </ng-container>
+</div>
+
+<ng-template #elseTemp>
+    <p>Não possui atividade para o horário.</p>
+</ng-template>

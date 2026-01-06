@@ -1,0 +1,16 @@
+.activities {
+  overflow-y: hidden;
+  padding: 10px;
+  height: 100%;
+}
+.activities > h1 {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1.5em;
+}
+
+.checked {
+  text-decoration: line-through;
+  font-style: italic;
+  color: rgba(96, 96, 96, 0.869);
+}
