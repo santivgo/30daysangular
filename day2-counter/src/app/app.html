@@ -1,0 +1,14 @@
+<div class="counter flex text-center align-center mt-10 flex-col gap-5">
+  <h1 class="text-4xl font-bold ">Counter: {{contador}} </h1>
+  <div class="buttons flex justify-center text-xl gap-3">
+    <button (click)="increment()">Increment</button>
+    <button (click)="decrement()">Decrement</button>
+  </div>
+
+  <div [ngSwitch]="getActualStatus()" class="">
+    <p *ngSwitchCase="'positivo'" [ngStyle]="{color: 'green'}">O contador é {{getActualStatus()}}</p>
+    <p *ngSwitchCase="'negativo'" [ngStyle]="{color: 'red'}">O contador é {{getActualStatus()}}</p>
+    <p *ngSwitchCase="'neutro'" [ngStyle]="{color: 'grey'}">O contador é {{getActualStatus()}}</p>
+
+  </div>
+</div>
