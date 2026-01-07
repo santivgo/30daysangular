@@ -1,0 +1,8 @@
+<div class="content flex items-center flex-col">
+    <h1>Stopwatch</h1>
+    <span>{{timer | number : "2.2-2"}} seconds</span>
+    <div class="buttons flex gap-2 *:bg-sky-400 mt-1 *:p-2 *:rounded-xl">
+        <button (click)="startOrStopWatch()">{{!isTimerRunning ? 'Start' : 'Stop'}}</button>
+        <button [ngClass]="{disabled: !realTimer}" (click)="resetWatch()" [disabled]="!realTimer">Reset</button>
+    </div>
+</div>
