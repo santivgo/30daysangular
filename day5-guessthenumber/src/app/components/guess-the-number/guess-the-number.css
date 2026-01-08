@@ -1,0 +1,8 @@
+.disabled {
+  background-color: gray;
+  color: rgb(104, 104, 104);
+  cursor: initial;
+}
+.disabled:active {
+  translate: 0px 0px;
+}
