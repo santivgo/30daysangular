@@ -1,0 +1,17 @@
+<div class="content gap-5 flex flex-col items-center p-5">
+    <h1>Jogo da Velha</h1>
+    <p *ngIf="!draw && ended">{{getActualElement()}} venceu! Muito bem</p>
+    <p *ngIf="draw && ended">Empate</p>
+
+    <div (click)="teste($event)" class="buttons grid-cols-3 h-100 gap-5 w-100 grid-rows-3 grid">
+        <button row="0" col="0"></button>
+        <button row="0" col="1"></button>
+        <button row="0" col="2"></button>
+        <button row="1" col="0"></button>
+        <button row="1" col="1"></button>
+        <button row="1" col="2"></button>
+        <button row="2" col="0"></button>
+        <button row="2" col="1"></button>
+        <button row="2" col="2"></button>
+    </div>
+</div>
